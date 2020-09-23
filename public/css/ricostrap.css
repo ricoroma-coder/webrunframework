@@ -1,0 +1,134 @@
+.col {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.col10 {
+	width: 10%;
+}
+
+.col15 {
+	width: 15%;
+}
+
+.col20 {
+	width: 20%;
+}
+
+.col25 {
+	width: 25%;
+}
+
+.col30 {
+	width: 33.33%;
+}
+
+.col35 {
+	width: 35%;
+}
+
+.col40 {
+	width: 40%;
+}
+
+.col45 {
+	width: 45%;
+}
+
+.col50 {
+	width: 50%;
+}
+
+.col55 {
+	width: 55%;
+}
+
+.col60 {
+	width: 60%;
+}
+
+.col65 {
+	width: 65%;
+}
+
+.col70 {
+	width: 70%;
+}
+
+.col75 {
+	width: 75%;
+}
+
+.col80 {
+	width: 80%;
+}
+
+.col85 {
+	width: 85%;
+}
+
+.col90 {
+	width: 90%;
+}
+
+.col95 {
+	width: 95%;
+}
+
+.col100 {
+	width: 100%;
+}
+
+.f-serif {
+	font-family: serif;
+}
+
+.f-sans {
+	font-family: sans-serif;
+}
+
+.f-mono {
+	font-family: monospace;
+}
+
+.font-0 {
+	font-size: 0px;
+}
+
+.font-0 > * {
+	font-size: 16px;
+}
+
+.font1 {
+	font-size: 38px;
+}
+
+.font2 {
+	font-size: 30px;
+}
+
+.font3 {
+	font-size: 26px;
+}
+
+.font4 {
+	font-size: 22px;
+}
+
+.font5 {
+	font-size: 18px;
+}
+
+.font6 {
+	font-size: 16px;
+}
+
+/*.link {
+}*/
+
+.link:hover {
+	text-decoration: none;
+	font-style: none;
+	cursor: pointer;
+}
+

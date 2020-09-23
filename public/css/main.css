@@ -1,0 +1,56 @@
+/* ==== General ==== */
+
+	html {
+		min-height: 100%;
+		max-height: auto;
+	}
+	
+	html,
+	body {
+		width: 100%;
+		height: 100%;
+	}
+
+/* ==== end General ==== */
+
+/* ==== Background ==== */
+
+	.bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+
+/* ==== end Background ==== */
+
+/* ==== #content ==== */
+
+	#content {
+		position: relative;
+		width: 100%;
+		min-height: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+	}
+
+/* ==== end #content ==== */
+
+/* ==== COMPONENTS ==== */
+
+	/* ==== #menuNavbar ==== */
+
+		#menuNavbar {
+			position: relative;
+			height: 75px;
+		}
+
+		.menu-link {
+			text-decoration: none;
+			font-style: none;
+			cursor: pointer;
+		}
+
+	/* ==== end #menuNavbar ==== */
+
+/* ==== end COMPONENTS ==== */

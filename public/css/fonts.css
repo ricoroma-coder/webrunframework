@@ -1,0 +1,142 @@
+/* === Lobster === */
+
+@font-face {
+    font-family: 'Lobster';
+    src: url('fonts/Lobster-Regular.ttf');
+    src: url('fonts/Lobster-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Lobster-Regular.woff') format('woff'),
+        url('fonts/Lobster-Regular.ttf') format('truetype'),
+        url('fonts/Lobster-Regular.svg#Lobster') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-lobster {
+	font-family: 'Lobster';
+}
+
+/* === Staatliches === */
+
+@font-face {
+    font-family: 'Staatliches';
+    src: url('fonts/Staatliches-Regular.ttf');
+    src: url('fonts/Staatliches-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Staatliches-Regular.woff') format('woff'),
+        url('fonts/Staatliches-Regular.ttf') format('truetype'),
+        url('fonts/Staatliches-Regular.svg#Staatliches') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-staatliches {
+	font-family: 'Staatliches';
+}
+
+/* === ABeeZee === */
+
+@font-face {
+    font-family: 'ABeeZee';
+    src: url('fonts/ABeeZee-Regular.ttf');
+    src: url('fonts/ABeeZee-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/ABeeZee-Regular.woff') format('woff'),
+        url('fonts/ABeeZee-Regular.ttf') format('truetype'),
+        url('fonts/ABeeZee-Regular.svg#ABeeZee') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-abeezee {
+	font-family: 'ABeeZee';
+}
+
+@font-face {
+    font-family: 'ABeeZee-Italic';
+    src: url('fonts/ABeeZee-Italic.ttf');
+    src: url('fonts/ABeeZee-Italic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/ABeeZee-Italic.woff') format('woff'),
+        url('fonts/ABeeZee-Italic.ttf') format('truetype'),
+        url('fonts/ABeeZee-Italic.svg#ABeeZee') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-abeezee-italic {
+	font-family: 'ABeeZee-Italic';
+}
+
+/* === BalooDa2 === */
+
+@font-face {
+    font-family: 'BalooDa2';
+    src: url('fonts/BalooDa2-Regular.ttf');
+    src: url('fonts/BalooDa2-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/BalooDa2-Regular.woff') format('woff'),
+        url('fonts/BalooDa2-Regular.ttf') format('truetype'),
+        url('fonts/BalooDa2-Regular.svg#BalooDa2') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-balooda2 {
+	font-family: 'BalooDa2';
+}
+
+@font-face {
+    font-family: 'BalooDa2-SemiBold';
+    src: url('fonts/BalooDa2-SemiBold.ttf');
+    src: url('fonts/BalooDa2-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/BalooDa2-SemiBold.woff') format('woff'),
+        url('fonts/BalooDa2-SemiBold.ttf') format('truetype'),
+        url('fonts/BalooDa2-SemiBold.svg#BalooDa2') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-balooda2-semibold {
+	font-family: 'BalooDa2-SemiBold';
+}
+
+@font-face {
+    font-family: 'BalooDa2-Bold';
+    src: url('fonts/BalooDa2-Bold.ttf');
+    src: url('fonts/BalooDa2-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/BalooDa2-Bold.woff') format('woff'),
+        url('fonts/BalooDa2-Bold.ttf') format('truetype'),
+        url('fonts/BalooDa2-Bold.svg#BalooDa2') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-balooda2-bold {
+	font-family: 'BalooDa2-Bold';
+}
+
+@font-face {
+    font-family: 'BalooDa2-Medium';
+    src: url('fonts/BalooDa2-Medium.ttf');
+    src: url('fonts/BalooDa2-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/BalooDa2-Medium.woff') format('woff'),
+        url('fonts/BalooDa2-Medium.ttf') format('truetype'),
+        url('fonts/BalooDa2-Medium.svg#BalooDa2') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-balooda2-medium {
+	font-family: 'BalooDa2-Medium';
+}
+
+@font-face {
+    font-family: 'BalooDa2-ExtraBold';
+    src: url('fonts/BalooDa2-ExtraBold.ttf');
+    src: url('fonts/BalooDa2-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/BalooDa2-ExtraBold.woff') format('woff'),
+        url('fonts/BalooDa2-ExtraBold.ttf') format('truetype'),
+        url('fonts/BalooDa2-ExtraBold.svg#BalooDa2') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-balooda2-extrabold {
+	font-family: 'BalooDa2-ExtraBold';
+}

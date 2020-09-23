@@ -1,0 +1,23 @@
+{
+    "name": "github/webrun",
+    "description": "WebRun framework",
+    "authors": [
+    {
+        "name": "Henrique Roma",
+        "email": "roma.fulldev@gmail.com"
+    }
+    ],
+        "require": {
+        "slim/slim": "3.*",
+        "robmorgan/phinx": "^0.12.3",
+        "illuminate/database": "^5.1.8"
+    },
+        "autoload" : {
+            "psr-4": {
+                "App\\" : "app/"
+        },
+        "files" : [
+            "app/helpers/helper_routes.php"
+        ]
+    }
+}
