@@ -28,7 +28,7 @@
 				</div>
 
 				<?php  
-					component('views/components/alerts', $messages);
+					component('views/components/alerts', $message);
 				?>
 				
 			</div>

@@ -1,3 +1,3 @@
 <?php 
 
-redirect('/', ['message'=>['type'=>'success','description'=>'olá'],'content'=>'teste']);
+redirect('/', ['message'=>[['type'=>'success','description'=>'olá']],'content'=>'teste']);

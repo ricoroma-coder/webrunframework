@@ -1,7 +1,3 @@
-<?php  
-	require __DIR__.'/../../preparation/header.php';
-	// var_dump($data);
-?>	
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +6,7 @@
 </head>
 <body>
 
-	<?php 
+	<?php
 		component('views/components/navbar', ['session'=>$session,'object'=>$obj]);
 	?>
 
@@ -35,7 +31,7 @@
 				</div>
 
 				<?php 
-					component('views/components/alerts', $messages);
+					component('views/components/alerts', $message);
 				?>
 				
 			</form>

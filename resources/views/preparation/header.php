@@ -1,19 +1,17 @@
 <?php
 
 use App\User;
+require_once __DIR__ . "/preventCookies.php";
 
-$obj = false;
+$obj = null;
 $session = false;
 
-if (hasSession()) {
-
-	$obj = User::find(getSessionValue('obj'));
+if (hasSession()) 
+{
+	$obj = User::find(getSessionValue("obj"));
 	$session = true;
-
 }
 
-$messages = [];
+$message = [];
 if (isset($data->message))
-	$messages = $data->message;
-
-?>
+	$message = $data->message;
