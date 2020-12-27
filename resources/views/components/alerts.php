@@ -1,31 +1,31 @@
 <?php
 	if (!empty($data)) 
 	{
+		if (!is_array($data))
+		{
+			$data = [$data];
+		}
 
 		foreach ($data as $value)
 		{
-			if ($value->type == "error") 
+			$classCss = "col100 alert alert-danger";
+			if ($value->TYPE == "S")
 			{
+				$classCss = "col100 alert alert-success";
+			}
+			else if ($value->TYPE == "W")
+			{
+				$classCss = "col100 alert alert-warning";
+			}
 ?>
-				<div class="col-sm-12 messages">
-					<div class="col100 alert alert-danger" role="alert">
-						<?php echo $value->description; ?>
-					</div>
+
+			<div class="col-sm-12 messages">
+				<div class="<?php echo $classCss; ?>" role="alert">
+					<?php echo $value->DESCRIPTION; ?>
 				</div>
+			</div>
 
 <?php
-			}
-			else if ($value->type == "success") 
-			{
-?>
-				<div class="col-sm-12 messages">
-					<div class="col100 alert alert-success" role="alert">
-						<?php echo $value->description; ?>
-					</div>
-				</div>
-
-<?php
-			}
 		}
 	}
 ?>

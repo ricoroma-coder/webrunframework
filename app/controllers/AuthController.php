@@ -4,63 +4,74 @@ namespace App\Controllers;
 
 use App\Controllers\Controller;
 use App\User;
+use App\General\GeneralFunction as Functions;
 
-class AuthController extends Controller {
+class AuthController extends Controller 
+{
 
-	public function login($data = []) {
- 		if (hasSession())
- 			return redirect('/');
-        return view('auth/login', $data['custom']);
+	public function login() 
+	{
+		if (hasSession())
+		{
+			Functions::redirect('', '/', []);
+		}
+		else
+		{
+			return view('auth/login');
+		}
  	}
 
- 	public function forgotPassword() {
+ 	public function forgotPassword() 
+ 	{
         return view('auth/forgot-password');
  	}
 
- 	public function register($data = []) {
+ 	public function register($data = []) 
+ 	{
  		if (hasSession())
  			return redirect('/');
         return view('auth/register', $data['custom']);
  	}
 
- 	public function auth($request) {
+ 	public function auth($request) 
+ 	{
  		$user = new User();
  		$user = $user->checkAuthenticable($request['method']);
  		$redirect = '/';
  		$content = [];
- 		if ($user) {
+ 		if ($user) 
+ 		{
  			$content = [
- 				'messages' => [
- 					'success' => ['Conectado com sucesso']
- 				]
- 			];
+				'TYPE' => 'S', 'DESCRIPTION' => 'Conectado com sucesso'
+			 ];
  			$user->session();
  		}
- 		else {
+ 		else 
+ 		{
  			$content = [
- 				'messages' => [
- 					'error' => ['Os campos não batem']
- 				]
- 			];
+				'TYPE' => 'E', 'DESCRIPTION' => 'Campos inválidos'
+			 ];
  			$redirect = '/login';
  		}
- 		return redirect($redirect, $content);
+ 		Functions::redirect($content, $redirect, []);
  	}
 
- 	public function logOut() {
- 		unset($_SESSION['obj']);
+ 	public function logOut() 
+ 	{
+ 		unset($_SESSION['USER']);
  		$content = [
-			'messages' => [
-				'success' => ['Desconectado com sucesso']
-			]
+			'TYPE' => 'S',
+			'DESCRIPTION' => 'Desconectado com sucesso'
 		];
- 		return redirect('/', $content);
+ 		Functions::redirect($content,'/', []);
 	}
 	 
-	public function signin($request) {
+	public function signin($request) 
+	{
 		$user = new User();
 
-		foreach($request['method'] as $key => $value) {
+		foreach($request['method'] as $key => $value) 
+		{
 			$user->$key = $value;
 		}
 
@@ -73,17 +84,23 @@ class AuthController extends Controller {
 		$validate['messages'] = $user->validate($rules);
 
 		if (!empty($validate['messages']))
-			return redirect('/cadastrar', $validate);
-		$user->password = password_hash($user->password, PASSWORD_BCRYPT);
-		if ($user->save()) {
-			$validate['messages'] = ['success' => ['Cadastrado com sucesso']];
-			return redirect('/', $validate);
+		{
+			Functions::redirect($validate['messages'], '/cadastrar', $validate);
 		}
-		else {
-			$validate['messages'] = ['error' => ['conn' => 'Houve um erro de conexão']];
-			return redirect('/cadastrar', $validate);
+		else
+		{
+			$user->password = password_hash($user->password, PASSWORD_BCRYPT);
+			if ($user->save()) 
+			{
+				$validate['messages'] = ['TYPE' => 'S', 'DESCRIPTION' => 'Cadastrado com sucesso'];
+				Functions::redirect($validate['messages'], '/', $validate);
+			}
+			else 
+			{
+				$validate['messages'] = ['TYPE' => 'E', 'DESCRIPTION' => 'Houve um erro de conexão'];
+				Functions::redirect($validate['messages'], '/cadastrar', $validate);
+			}
 		}
-		
 	}
 
 }

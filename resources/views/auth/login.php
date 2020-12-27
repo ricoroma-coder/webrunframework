@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<?php require __DIR__.'/../layout/links.php'; ?>
+	<?php require __DIR__ . "/../layout/links.php"; ?>
 	<title>Eloquent Project - Login</title>
 </head>
 <body>
 
 	<?php
-		component('views/components/navbar', ['session'=>$session,'object'=>$obj]);
+		component('views/components/navbar', ['session'=>$session,'object'=>$user]);
 	?>
 
 	<div id="content">
@@ -31,7 +31,7 @@
 				</div>
 
 				<?php 
-					component('views/components/alerts', $message);
+					component('views/components/alerts', $messages);
 				?>
 				
 			</form>

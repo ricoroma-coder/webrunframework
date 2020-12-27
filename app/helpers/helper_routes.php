@@ -29,32 +29,6 @@ function redirect($base, $data = [], $files = [])
 
     return header("Location: " . $base);
 }
-
-// Cookies treatment
-
-function hasCookieData() 
-{
-    return isset($_COOKIE['_DATA']) && !empty($_COOKIE['_DATA']);
-}
-
-function hasCookieFiles()
-{
-    return isset($_COOKIE['files']) && !empty($_COOKIE['files']);
-}
-
-function cookieGetData() 
-{
-    $aux = json_decode($_COOKIE['_DATA']);
-    return $aux;
-}
-
-function cookieGetFiles() 
-{
-    $aux = json_decode($_COOKIE['files']);
-    return $aux;
-}
-
-// end Cookies treatment
  
 function route($name, $params = null) 
 {
@@ -99,7 +73,7 @@ function component($path, $data = [])
 
 function hasSession() 
 {
-    return isset($_SESSION['obj']) && !empty($_SESSION['obj']);
+    return isset($_SESSION['USER']) && !empty($_SESSION['USER']);
 }
 
 function getSessionValue($key) 

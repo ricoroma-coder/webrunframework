@@ -1,17 +1,26 @@
 <?php
 
 use App\User;
-require_once __DIR__ . "/preventCookies.php";
+use App\General\GeneralFunction as Functions;
 
-$obj = null;
+$data = Functions::checkSessionRedirect();
+
+$user = null;
 $session = false;
-
-if (hasSession()) 
+if (isset($_SESSION['USER'])) 
 {
-	$obj = User::find(getSessionValue("obj"));
+	$user = User::find($_SESSION['USER']);
 	$session = true;
 }
 
-$message = [];
-if (isset($data->message))
-	$message = $data->message;
+$messages = [];
+if (isset($data->MESSAGE))
+{
+	$messages = $data->MESSAGE;
+}
+
+$values = [];
+if (isset($data->VALUES))
+{
+	$values = $data->VALUES;
+}

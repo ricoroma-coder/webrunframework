@@ -5,15 +5,20 @@ namespace App\General;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Capsule\Manager as DB;
 
-class Validate extends Model {
+class Validate extends Model 
+{
 
-    public function validate($array) {
+    public function validate($array) 
+    {
         $messages = [];
-        foreach($array as $key => $value) {
+        foreach($array as $key => $value) 
+        {
             $rules = explode('|', $value);
-            foreach($rules as $value) {
+            foreach($rules as $value) 
+            {
                 $aux = explode(':',$value);
-                switch ($aux[0]) {
+                switch ($aux[0]) 
+                {
                     case 'require':
                         if (!isset($this->$key) || empty($this->$key))
                             $messages['error'][$key][] = 'Campo obrigatório';

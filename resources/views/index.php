@@ -7,7 +7,7 @@
 <body>
 
 	<?php 
-		component('views/components/navbar', ['session'=>$session,'object'=>$obj]);
+		component('views/components/navbar', ['session'=>$session,'object'=>$user]);
 	?>
 
 	<div id="content">
@@ -28,7 +28,7 @@
 				</div>
 
 				<?php  
-					component('views/components/alerts', $message);
+					component('views/components/alerts', $messages);
 				?>
 				
 			</div>
