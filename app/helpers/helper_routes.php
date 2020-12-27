@@ -18,17 +18,6 @@ function resolve($base = '', $data = [], $files = [])
     $request = new Request($base, $data, $files);
     return Route::resolve($request);
 }
-
-function redirect($base, $data = [], $files = []) 
-{
-    if (!empty($data))
-        setcookie("_DATA", json_encode($data));
-
-    if (!empty($files))
-        setcookie("_FILES", json_encode($files));
-
-    return header("Location: " . $base);
-}
  
 function route($name, $params = null) 
 {
@@ -80,5 +69,3 @@ function getSessionValue($key)
 {
     return $_SESSION[$key];
 }
-
-?>

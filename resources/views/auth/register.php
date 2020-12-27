@@ -24,8 +24,10 @@
 					<label class="font4" for="name-input">Nome</label>
     				<input type="text" class="form-control <?php if (isset($msg['error']->name)) echo 'is-invalid'; ?>" id="name-input" placeholder="Nome" name="name">
     				<?php 
-    					if (isset($msg['error']->name))
-    						component('views/components/invalid_feedback', $msg['error']->name[0]);
+						if (isset($msg['error']->name))
+						{
+							component('views/components/invalid_feedback', $msg['error']->name[0]);
+						}
 					?>
 				</div>
 
@@ -33,8 +35,10 @@
 					<label class="font4" for="username-input">Nome de usuário</label>
     				<input type="text" class="form-control <?php if (isset($msg['error']->username)) echo 'is-invalid'; ?>" id="username-input" placeholder="Nome de usuário" name="username">
     				<?php 
-    					if (isset($msg['error']->username))
-    						component('views/components/invalid_feedback', $msg['error']->username[0]);
+						if (isset($msg['error']->username))
+						{
+							component('views/components/invalid_feedback', $msg['error']->username[0]);
+						}
 					?>
 				</div>
 
@@ -42,8 +46,10 @@
 					<label class="font4" for="password-input">Senha</label>
     				<input type="password" class="form-control <?php if (isset($msg['error']->password)) echo 'is-invalid'; ?>" id="password-input" placeholder="Senha" name="password">
     				<?php 
-    					if (isset($msg['error']->password))
-    						component('views/components/invalid_feedback', $msg['error']->password[0]);
+						if (isset($msg['error']->password))
+						{
+							component('views/components/invalid_feedback', $msg['error']->password[0]);
+						}
 					?>
 				</div>
 
@@ -51,8 +57,10 @@
 					<label class="font4" for="email-input">E-mail</label>
     				<input type="text" class="form-control <?php if (isset($msg['error']->email)) echo 'is-invalid'; ?>" id="email-input" placeholder="E-mail" name="email">
     				<?php 
-    					if (isset($msg['error']->email))
-    						component('views/components/invalid_feedback', $msg['error']->email[0]);
+						if (isset($msg['error']->email))
+						{
+							component('views/components/invalid_feedback', $msg['error']->email[0]);
+						}
 					?>
 				</div>
 
@@ -62,7 +70,9 @@
 
 				<?php
 					if (isset($msg['error']->conn))
+					{
 						component('views/components/alerts', $msg['error']->conn);
+					}
 				?>
 				
 			</form>

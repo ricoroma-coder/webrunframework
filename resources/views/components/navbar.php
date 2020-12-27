@@ -6,7 +6,8 @@
 
 	<?php 
 
-		if ($data['session']) {
+		if ($data['session']) 
+		{
 
 	?>
 
@@ -27,14 +28,16 @@
 	<?php
 
 		}
-		else {
+		else 
+		{
 
 	?>
 
 		<div class="row col-sm-4 text-center">
 
 			<?php 
-				if (!routeIs('/cadastrar')) { 
+				if (!routeIs('/cadastrar')) 
+				{ 
 			?>
 			
 			<div class="col-sm-6 pt-3 border-left">
@@ -43,7 +46,8 @@
 
 			<?php
 				}
-				if (!routeIs('/login')) { 
+				if (!routeIs('/login')) 
+				{ 
 			?>
 
 				<div class="col-sm-6 pt-3 border-left border-right">
@@ -52,7 +56,8 @@
 
 			<?php
 				}
-				if (!routeIs('/')) {
+				if (!routeIs('/')) 
+				{
 			?>
 
 				<div class="col-sm-6 pt-3 border-left border-right">

@@ -13,19 +13,28 @@ class Auth extends Validate
 
 		if (isset($obj) && !empty($obj)) 
 		{
- 			if (password_verify($data['password'], $obj->password))
- 				return $obj;
- 			else
- 				return false;
+			if (password_verify($data['password'], $obj->password))
+			{
+				return $obj; 
+			}
+			else
+			{
+				return false; 
+			}
  		}
- 		else
- 			return false;
+		else
+		{
+			return false;
+		}
+ 			
 	}
 
 	public function session() 
 	{
 		if (isset($_SESSION))
+		{
 			session_destroy();
+		}
 		session_start();
 		$_SESSION['USER'] = $this->id;
 	}
