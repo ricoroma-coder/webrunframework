@@ -2,6 +2,8 @@
 
 use App\General\GeneralFunction as Functions;
 
+print_r(parse_ini_file(__DIR__ . "/../../WRFInfo.ini"));
+
 // $message = [
 //     'TYPE' => 'W',
 //     'DESCRIPTION' => 'conteudo de teste'

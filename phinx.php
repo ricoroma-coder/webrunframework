@@ -2,7 +2,7 @@
 
 require 'app/general/Database.php';
 
-$db = new Database();
+$db = parse_ini_file("WRFInfo.ini");
 
 return
 [
@@ -14,30 +14,30 @@ return
         'default_migration_table' => 'phinxlog',
         'default_environment' => 'development',
         'production' => [
-            'adapter' => $db->DBDRIVER,
-            'host' => $db->DBHOST,
-            'name' => $db->DBNAME,
-            'user' => $db->DBUSER,
-            'pass' => $db->DBPASS,
-            'port' => $db->DBPORT,
+            'adapter' => $db['DRIVER'],
+            'host' => $db['HOST'],
+            'name' => $db['NAME'],
+            'user' => $db['USER'],
+            'pass' => empty($db['PASS']) ? '' : $db['PASS'],
+            'port' => $db['PORT'],
             'charset' => 'utf8',
         ],
         'development' => [
-            'adapter' => $db->DBDRIVER,
-            'host' => $db->DBHOST,
-            'name' => $db->DBNAME,
-            'user' => $db->DBUSER,
-            'pass' => $db->DBPASS,
-            'port' => $db->DBPORT,
+            'adapter' => $db['DRIVER'],
+            'host' => $db['HOST'],
+            'name' => $db['NAME'],
+            'user' => $db['USER'],
+            'pass' => empty($db['PASS']) ? '' : $db['PASS'],
+            'port' => $db['PORT'],
             'charset' => 'utf8',
         ],
         'testing' => [
-            'adapter' => $db->DBDRIVER,
-            'host' => $db->DBHOST,
-            'name' => $db->DBNAME,
-            'user' => $db->DBUSER,
-            'pass' => $db->DBPASS,
-            'port' => $db->DBPORT,
+            'adapter' => $db['DRIVER'],
+            'host' => $db['HOST'],
+            'name' => $db['NAME'],
+            'user' => $db['USER'],
+            'pass' => empty($db['PASS']) ? '' : $db['PASS'],
+            'port' => $db['PORT'],
             'charset' => 'utf8',
         ]
     ],
