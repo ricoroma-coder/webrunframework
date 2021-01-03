@@ -1,6 +1,8 @@
 <?php
 
-require 'config.php';
+require 'app/general/Database.php';
+
+$db = new Database();
 
 return
 [
@@ -12,30 +14,30 @@ return
         'default_migration_table' => 'phinxlog',
         'default_environment' => 'development',
         'production' => [
-            'adapter' => $DBDRIVER,
-            'host' => $DBHOST,
-            'name' => $DBNAME,
-            'user' => $DBUSER,
-            'pass' => $DBPASS,
-            'port' => $DBPORT,
+            'adapter' => $db->DBDRIVER,
+            'host' => $db->DBHOST,
+            'name' => $db->DBNAME,
+            'user' => $db->DBUSER,
+            'pass' => $db->DBPASS,
+            'port' => $db->DBPORT,
             'charset' => 'utf8',
         ],
         'development' => [
-            'adapter' => $DBDRIVER,
-            'host' => $DBHOST,
-            'name' => $DBNAME,
-            'user' => $DBUSER,
-            'pass' => $DBPASS,
-            'port' => $DBPORT,
+            'adapter' => $db->DBDRIVER,
+            'host' => $db->DBHOST,
+            'name' => $db->DBNAME,
+            'user' => $db->DBUSER,
+            'pass' => $db->DBPASS,
+            'port' => $db->DBPORT,
             'charset' => 'utf8',
         ],
         'testing' => [
-            'adapter' => $DBDRIVER,
-            'host' => $DBHOST,
-            'name' => $DBNAME,
-            'user' => $DBUSER,
-            'pass' => $DBPASS,
-            'port' => $DBPORT,
+            'adapter' => $db->DBDRIVER,
+            'host' => $db->DBHOST,
+            'name' => $db->DBNAME,
+            'user' => $db->DBUSER,
+            'pass' => $db->DBPASS,
+            'port' => $db->DBPORT,
             'charset' => 'utf8',
         ]
     ],
