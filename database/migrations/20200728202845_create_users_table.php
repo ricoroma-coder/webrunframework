@@ -29,6 +29,10 @@ final class CreateUsersTable extends AbstractMigration
             ->addColumn('password', 'string', [
                 'null' => false
             ])
+            ->addColumn('lost_pass', 'integer', [
+                'null' => false,
+                'default' => 0
+            ])
             ->addColumn('active', 'boolean', [
                 'null' => false,
                 'default' => true

@@ -26,6 +26,12 @@
     				<input type="password" class="form-control" id="password-input" placeholder="Senha" name="password">
 				</div>
 
+				<div class="col-sm-12 mb-2">
+					<a href="/recuperar-senha">
+						<label class="font6">Esqueci minha senha</label>
+					</a>
+				</div>
+
 				<div class="col-sm-12 mb-2 text-right">
 					<button class="btn btn-primary">Entrar</button>
 				</div>

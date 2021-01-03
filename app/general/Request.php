@@ -61,7 +61,7 @@ class Request
         }
     }
  
-    protected function setData($data = [])
+    protected function setData()
     {
         switch($this->method) {
             case 'post':
@@ -77,9 +77,7 @@ class Request
                 $this->data['method'] = $_GET;
                 break;
             parse_str(file_get_contents('php://input'), $this->data);
-        }
-        $this->data['custom'] = $data;
-        
+        }        
     }
  
     protected function setFiles($files = []) 

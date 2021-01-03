@@ -32,4 +32,45 @@ class GeneralFunction extends Model
         
         return [];
     }
+
+    /**
+     * Types: 
+     * ALPHA - Alphanumeric
+     * INT - Numeric
+     * LETTERS - Just letters
+     * SPECIAL - Alphanumeric with special chars
+     */
+    public static function newRandomString($type, $length)
+    {
+        if ($type == 'INT')
+        {
+            $characters = '0123456789';
+        }
+        else if ($type == 'LETTERS')
+        {
+            $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        }
+        else if ($type == 'SPECIAL')
+        {
+            $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%&*()_-+=';
+        }
+        else
+        {
+            $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        }
+        
+        $randstring = '';
+        for ($i = 0; $i < $length; $i++) 
+        {
+            $randstring .= $characters[rand(0, strlen($characters))];
+        }
+
+        return $randstring;
+    }
+
+    public static function getUrlContent()
+    {
+        $content = explode('/', $_SERVER['PHP_SELF']);
+        return $content[sizeof($content)-1];
+    }
 }

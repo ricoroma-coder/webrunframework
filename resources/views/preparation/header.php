@@ -9,7 +9,7 @@ $user = null;
 $session = false;
 if (isset($_SESSION['USER'])) 
 {
-	$user = User::find($_SESSION['USER']);
+	$user = User::findUser('id', $_SESSION['USER']);
 	$session = true;
 }
 
