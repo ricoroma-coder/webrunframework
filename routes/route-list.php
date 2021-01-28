@@ -1,6 +1,7 @@
 <?php
 
 use App\General\Route;
+use App\General\GeneralFunction as Functions;
 
 Route::get("/", "ViewController@index");
 
@@ -18,3 +19,5 @@ Route::get("/testando", function ()
 {
 	return view("teste");
 });
+
+Route::post("/testando/teste", 'ViewController@uploadImage');

@@ -33,7 +33,7 @@ OBS: Esse projeto foi desenvolvidor para rodar em PHP 7>
 - Abra o arquivo route-list.php em "routes/route-list.php":
 - Registre uma nova rota como mostrado no arquivo;
 - Para acessar essa nova rota no navegador localmente, configure a url para:
-	localhost/standard-eloquent-project/categorias
+	localhost/{pasta do projeto}/categorias
 	ou
 	127.0.0.1:8080/categorias
 - Para acessar essa nova rota no navegador remotamente, configure a url para:

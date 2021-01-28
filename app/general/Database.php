@@ -6,27 +6,18 @@ use Illuminate\Database\Capsule\Manager as Capsule;
  
 class Database 
 {
-    private $DRIVER;
-    private $HOST;
-    private $NAME;
-    private $USER;
-    private $PASS;
-    private $PORT;
+    private $DB;
  
     public function __construct() 
     {
-        $db = parse_ini_file(__DIR__ . "/../../WRFInfo.ini");
-        foreach ($db as $key => $attribute)
-        {
-            $this->$key = $attribute;
-        }
+        $this->DB = parse_ini_file(__DIR__ . "/../../WRFInfo.ini");
         $capsule = new Capsule;
         $capsule->addConnection([
-            "driver" => $this->DRIVER,
-            "host" => $this->HOST,
-            "database" => $this->NAME,
-            "username" => $this->USER,
-            "password" => empty($this->PASS) ? '' : $this->PASS,
+            "driver" => $this->DB['DRIVER'],
+            "host" => $this->DB['HOST'],
+            "database" => $this->DB['NAME'],
+            "username" => $this->DB['USER'],
+            "password" => empty($this->DB['PASS']) ? '' : $this->DB['PASS'],
             "charset" => "utf8",
             "collation" => "utf8_unicode_ci",
             "prefix" => "",
