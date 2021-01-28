@@ -1,6 +1,7 @@
 {
     "name": "github/webrun",
     "description": "WebRun framework",
+    "version": "v1.0.6",
     "authors": [
     {
         "name": "Henrique Roma",
